@@ -44,7 +44,7 @@ int main()
     RenderWindow window(VideoMode(MAX_WIDTH, MAX_HEIGHT), "SFML works!");
     //window.setKeyRepeatEnabled(true);
     window.setFramerateLimit(30);
-    Ball ball(640.f, 360.f);
+    Ball ball(640.0, 360.0);
     Plate player1(100, MAX_HEIGHT/2, Keyboard::Key::W, Keyboard::Key::S);
     Plate player2(MAX_WIDTH - 100, MAX_HEIGHT/2, Keyboard::Key::Up, Keyboard::Key::Down);
 
@@ -54,12 +54,12 @@ int main()
         std::cout << "font load error" << std::endl;
 
     Text score1("0", font, 100);
-    score1.setColor(Color::White);
+    score1.setFillColor(Color::White);
     score1.setPosition(200, 50);
     score1.setStyle(sf::Text::Bold);
 
     Text score2("0", font, 100);
-    score2.setColor(Color::White);
+    score2.setFillColor(Color::White);
     score2.setPosition(980, 50);
     score2.setStyle(sf::Text::Bold);
 
